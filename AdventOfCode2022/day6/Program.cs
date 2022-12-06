@@ -6,28 +6,6 @@
         Solution2();
     }
 
-    static void Solution1v1()
-    {
-        var charList = new List<char>();
-        var foundAt = -1;
-        foreach(var line in File.ReadAllLines("input.txt"))
-        {
-            for(var idx=0; idx< line.Length; idx++)
-            {
-                if(idx > 3)
-                {
-                    if (charList.Contains(line[idx]))
-                    {
-                        foundAt = idx;
-                        break;
-                    }
-                }
-                charList.Add(line[idx]);
-            }
-        }
-        Console.WriteLine($"Found at {foundAt}");
-    }
-
     static void Solution1()
     {
         var foundAt = -1;
